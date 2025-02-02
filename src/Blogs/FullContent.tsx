@@ -1,0 +1,76 @@
+import React ,{useState} from 'react'
+import Cleanup from '../images/Cleanup.png'
+import {Link} from 'react-router-dom'
+import UseEffectNoDep from './UseEffectNoDep.tsx'
+import UseEffectEmpDep from './UseEffectEmpDep.tsx'
+import UseEffectSingleDep from './UseEffectSingleDep.tsx'
+
+interface Showprops{
+    setShowModal:React.Dispatch<React.setStateAction<boolean>>
+    showmodal:boolean
+}
+
+const FullContent=({setShowModal,showmodal}:Showprops)=>{
+
+    const [removeanimation, setRemoveAnimation] = useState<boolean>(false);
+    const [showmodalcomponent,setShowModalComponent]=useState<boolean>(false)
+    const [chosencomponent,setChosenComponent]=useState<string|null>(null)
+
+
+    const handleClick=()=>{
+        setRemoveAnimation(true)
+        setTimeout(() => {
+            setShowModal(false)
+        }, 1000);
+        
+    }
+
+    const handlecompclick=(component:string)=>{
+        setChosenComponent(component)
+        setShowModalComponent(true)
+    }
+
+    return (
+        <div className="backgroundmodal">
+            <div className={`contentdiv ${!removeanimation ? "fadeIn" : "fadeOut"}`}>
+                <div className="cleanup" >
+                    <div>
+                        <strong>How to perform cleanup with UseEffect.</strong>
+                    </div>
+                    <div>
+                        <p>When the component unmounts or before the effect is rerun, any side effects are 
+                            cleaned up or reversed using the cleanup function in useEffect. It aids in stopping undesirable actions
+                            like <strong>deleting timers, unsubscribing from outside events</strong> , or rescinding API calls, as well as memory leaks.
+                        </p>
+                        <p>
+                        When the component unmounts or dependencies change, the cleanup function, which is returned from the effect function, 
+                        executes automatically.
+                        </p>
+                        <p>In this example we have attached an <strong>evenListener on resize when component unmounts 
+                        we want eventListener to be removed</strong> hence we write the logic in cleanup function</p>
+                    </div>
+                    <div>
+                        <img src={Cleanup} alt="" style={{width: "50%", height: "auto", objectFit: "contain"}} />
+                    </div>
+                    <div className="realLife">
+                        <div>Here is the code for Each type of useEffect Method</div>
+                        <div className="dependencies">
+                            <Link><button  className="btnlink" onClick={()=>handlecompclick("nodep")}>UseEffect without Dependency Array</button></Link>
+                            <Link><button  className="btnlink" onClick={()=>handlecompclick("empdep")}>UseEffect with Empty Dependency Array</button></Link>
+                            <Link><button  className="btnlink" onClick={()=>handlecompclick("singledep")}>UseEffect With State Dependency </button></Link>
+                        </div>
+                    </div>
+                </div>
+                {showmodalcomponent && chosencomponent==='nodep' && <UseEffectNoDep setShowModalComponent={setShowModalComponent}/>}
+                {showmodalcomponent && chosencomponent==='empdep' && <UseEffectEmpDep setShowModalComponent={setShowModalComponent}/>}
+                {showmodalcomponent && chosencomponent==='singledep' && <UseEffectSingleDep setShowModalComponent={setShowModalComponent}/>}
+                <div style={{position:"absolute",top:"0",right:"1rem"}}>
+                    <button className="btn" onClick={handleClick} >Close</button>
+                </div>
+
+            </div>
+        </div>
+    )
+}
+
+export default FullContent
