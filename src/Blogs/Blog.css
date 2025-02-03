@@ -430,7 +430,7 @@
 .image-container img {
   width: 30%; 
   height: 100%;
-  object-fit: contain;
+  object-fit: inherit;
   border: 1px solid #ccc;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
@@ -440,6 +440,11 @@
 .image-container img:hover {
   transform: scale(1.05);
 }
+
+.demobtn:hover {
+  transform: scale(1.05);
+}
+
 
 
 .btn:hover {
@@ -480,6 +485,12 @@
   }
 }
 
+.demobtn{
+  color:black;
+  background-color:#4CAF50;
+  border:none;
+  border-radius:15px;
+}
 
 
 

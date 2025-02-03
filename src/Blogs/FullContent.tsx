@@ -35,7 +35,7 @@ const FullContent=({setShowModal,showmodal}:Showprops)=>{
     return (
         <div className="backgroundmodal">
             <div className={`contentdiv ${!removeanimation ? "fadeIn" : "fadeOut"}`}>
-                <div className="cleanup" >
+                <div className="cleanup" style={{padding:"0.5rem"}}>
                     <div>
                         <strong>How to perform cleanup with UseEffect.</strong>
                     </div>
@@ -54,13 +54,13 @@ const FullContent=({setShowModal,showmodal}:Showprops)=>{
                     <div>
                         <img src={Cleanup} alt="" style={{width: "50%", height: "auto", objectFit: "contain"}} />
                     </div>
-                    <button className="btn" onClick={()=>{setShowEffect(true)}} style={{color:"black"}}>See Demo</button>
+                    <button className="demobtn" onClick={()=>{setShowEffect(true)}} >See Demo</button>
                     <div className="realLife">
                         <div>Click to see different type of useEffect Methods</div>
                         <div className="dependencies">
-                            <Link><button  className="btnlink" onClick={()=>handlecompclick("nodep")}>No Dependency Array</button></Link>
-                            <Link><button  className="btnlink" onClick={()=>handlecompclick("empdep")}>Empty Dependency Array</button></Link>
-                            <Link><button  className="btnlink" onClick={()=>handlecompclick("singledep")}>State Dependency Array</button></Link>
+                            <Link><button  className="btnlink" onClick={()=>handlecompclick("nodep")} style={{padding:"5px"}}>No Dependency Array</button></Link>
+                            <Link><button  className="btnlink" onClick={()=>handlecompclick("empdep")} style={{padding:"5px"}}>Empty Dependency Array</button></Link>
+                            <Link><button  className="btnlink" onClick={()=>handlecompclick("singledep")} style={{padding:"5px"}}>State Dependency Array</button></Link>
                         </div>
                     </div>
                 </div>
