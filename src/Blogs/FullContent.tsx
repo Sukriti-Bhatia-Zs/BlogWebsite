@@ -35,7 +35,7 @@ const FullContent=({setShowModal,showmodal}:Showprops)=>{
     return (
         <div className="backgroundmodal">
             <div className={`contentdiv ${!removeanimation ? "fadeIn" : "fadeOut"}`}>
-                <div className="cleanup" style={{padding:"0.5rem"}}>
+                <div className="cleanup" style={{padding:"0.5rem",overflowX:"hidden"}}>
                     <div>
                         <strong>How to perform cleanup with UseEffect.</strong>
                     </div>

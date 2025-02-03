@@ -19,6 +19,7 @@ const Demo=({setShowEffect}:Showprops)=>{
     },[count])
 
      const handleClick=()=>{
+        setBg(false)
             setRemoveAnimation(true);
             setTimeout(()=>{
                 setShowEffect(false)
@@ -31,11 +32,11 @@ const Demo=({setShowEffect}:Showprops)=>{
                 <div className="cleanup" style={{background: 'linear-gradient(90deg, rgba(245,235,239,0.07749037114845936) 0%, rgba(148,187,233,0.6293110994397759) 90%)',border:"none",animation:"none",cursor:"pointer",backgroundColor: bg ? "grey" : "white",padding:"0.5rem"}}>
 
                     <div>
-                        <h2 style={{color:"red"}}>{message}</h2>
+                        <h2 style={{color:"red",textDecoration:"underline"}}>{message}</h2>
                     </div>
                     <div>
                         <h3>Please Click on increment Button to see changed Value</h3>
-                        <p><strong>useEffect</strong> called on incrementing the count since state change</p>
+                        <p><strong>useEffect</strong> called on incrementing the count since state changes</p>
                     </div>
                     <div>
                         <button className="btn" onClick={()=>setCount(prev=>prev+1)}>Increment</button>
