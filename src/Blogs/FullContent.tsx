@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import UseEffectNoDep from './UseEffectNoDep.tsx'
 import UseEffectEmpDep from './UseEffectEmpDep.tsx'
 import UseEffectSingleDep from './UseEffectSingleDep.tsx'
+import Demo from './Demo.tsx'
 
 interface Showprops{
     setShowModal:React.Dispatch<React.setStateAction<boolean>>
@@ -15,6 +16,7 @@ const FullContent=({setShowModal,showmodal}:Showprops)=>{
     const [removeanimation, setRemoveAnimation] = useState<boolean>(false);
     const [showmodalcomponent,setShowModalComponent]=useState<boolean>(false)
     const [chosencomponent,setChosenComponent]=useState<string|null>(null)
+    const [showeffect,setShowEffect]=useState<boolean>(false)
 
 
     const handleClick=()=>{
@@ -52,18 +54,22 @@ const FullContent=({setShowModal,showmodal}:Showprops)=>{
                     <div>
                         <img src={Cleanup} alt="" style={{width: "50%", height: "auto", objectFit: "contain"}} />
                     </div>
+                    <div>
+                        <button className="btn" onClick={()=>{setShowEffect(true)}} style={{color:"black"}}>See Demo</button>
+                    </div>
                     <div className="realLife">
-                        <div>Here is the code for Each type of useEffect Method</div>
+                        <div>Click to see different type of useEffect Methods</div>
                         <div className="dependencies">
-                            <Link><button  className="btnlink" onClick={()=>handlecompclick("nodep")}>UseEffect without Dependency Array</button></Link>
-                            <Link><button  className="btnlink" onClick={()=>handlecompclick("empdep")}>UseEffect with Empty Dependency Array</button></Link>
-                            <Link><button  className="btnlink" onClick={()=>handlecompclick("singledep")}>UseEffect With State Dependency </button></Link>
+                            <Link><button  className="btnlink" onClick={()=>handlecompclick("nodep")}>No Dependency Array</button></Link>
+                            <Link><button  className="btnlink" onClick={()=>handlecompclick("empdep")}>Empty Dependency Array</button></Link>
+                            <Link><button  className="btnlink" onClick={()=>handlecompclick("singledep")}>State Dependency Array</button></Link>
                         </div>
                     </div>
                 </div>
                 {showmodalcomponent && chosencomponent==='nodep' && <UseEffectNoDep setShowModalComponent={setShowModalComponent}/>}
                 {showmodalcomponent && chosencomponent==='empdep' && <UseEffectEmpDep setShowModalComponent={setShowModalComponent}/>}
                 {showmodalcomponent && chosencomponent==='singledep' && <UseEffectSingleDep setShowModalComponent={setShowModalComponent}/>}
+                {showeffect && <Demo setShowEffect={setShowEffect}/>}
                 <div style={{position:"absolute",top:"0",right:"1rem"}}>
                     <button className="btn" onClick={handleClick} >Close</button>
                 </div>

@@ -19,7 +19,7 @@ const MainBlog=()=>{
                             </p>
                         </div>
                         <div>
-                            <p><strong>We promote involvement and innovation here at BloggingFree.com . </strong>
+                            <p><strong>We promote involvement and innovation here at Blogging Site . </strong>
                             <br/>
                                 <strong>
                                     There's always something new to learn whether you're a voracious reader or an aspiring writer!
@@ -27,7 +27,7 @@ const MainBlog=()=>{
                             </p>
                         </div>
                         <div>
-                            <p><strong>Become a part of our lively community at BloggingFree.com.</strong>
+                            <p><strong>Become a part of our lively community of Blogging.</strong>
                             <br/> Whether you're visiting to read thought-provoking articles or to contribute your own thoughts, there's always a chance to learn and engage!
                             </p>
                         </div>
