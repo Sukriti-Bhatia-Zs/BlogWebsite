@@ -19,8 +19,8 @@ const Demo=({setShowEffect}:Showprops)=>{
     },[count])
 
      const handleClick=()=>{
-        setBg(false)
             setRemoveAnimation(true);
+            setBg(false)
             setTimeout(()=>{
                 setShowEffect(false)
             },500)
