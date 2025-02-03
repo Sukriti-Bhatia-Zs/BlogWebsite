@@ -27,7 +27,7 @@ const UseEffectSingleDep=({setShowModalComponent}:modalprops)=>{
                         <p>Here is an example where the count statement will be printed on console whenever value of count is changed. </p>
                     </div>
                     <div>
-                        <img src='./singledep.png' alt="nodep" style={{width: "50%", height: "auto", objectFit: "contain",borderRadius:"10px"}}/>
+                        <img src='./singledep.png' alt="nodep" className="diving"/>
                     </div>
                     <div>
                         <p><strong>useEffect runs once since count starts at 0</strong></p>

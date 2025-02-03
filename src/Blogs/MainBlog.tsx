@@ -12,13 +12,13 @@ const MainBlog=()=>{
                             <h1>Welcome To The World Of Blogs</h1>
                         </div>
                         <div>
-                            <p>
+                            <p  className="ptag" style={{fontWeight:"900"}}>
                             Explore content from enthusiastic producers, offer your thoughts, and expand your knowledge. 
                             The most recent writings on a variety of subjects, including technology, 
                             lifestyle, travel, and more, are available to you through our blog community.
                             </p>
                         </div>
-                        <div>
+                        <div className="ptag">
                             <p><strong>We promote involvement and innovation here at Blogging Site . </strong>
                             <br/>
                                 <strong>
@@ -26,9 +26,9 @@ const MainBlog=()=>{
                                 </strong>
                             </p>
                         </div>
-                        <div>
-                            <p><strong>Become a part of our lively community of Blogging.</strong>
-                            <br/> Whether you're visiting to read thought-provoking articles or to contribute your own thoughts, there's always a chance to learn and engage!
+                        <div className="ptag">
+                            <p ><strong>Become a part of our lively community of Blogging.</strong>
+                            <br/> <strong>Whether you're visiting to read thought-provoking articles or to contribute your own thoughts, there's always a chance to learn and engage!</strong>
                             </p>
                         </div>
                         <div>

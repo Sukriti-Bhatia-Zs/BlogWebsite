@@ -33,8 +33,8 @@ const FullContent=({setShowModal,showmodal}:Showprops)=>{
 
     return (
         <div className="backgroundmodal">
-            <div className={`contentdiv ${!removeanimation ? "fadeIn" : "fadeOut"}`}>
-                <div className="cleanup" style={{padding:"0.5rem",overflowX:"hidden"}}>
+            <div className={`contentdiv ${!removeanimation ? "fadeIn" : "fadeOut"}` } >
+                <div className="cleanup" style={{padding:"0.5rem",overflowX:"hidden",gap:"0.2rem"}}>
                     <div>
                         <strong>How to perform cleanup with UseEffect.</strong>
                     </div>
@@ -51,7 +51,7 @@ const FullContent=({setShowModal,showmodal}:Showprops)=>{
                         we want eventListener to be removed</strong> hence we write the logic in cleanup function</p>
                     </div>
                     <div>
-                        <img src="./Cleanup.png" alt="" style={{width: "50%", height: "auto", objectFit: "contain"}} />
+                        <img src="./Cleanup.png" alt="" className="divimg" />
                     </div>
                     <button className="demobtn" onClick={()=>{setShowEffect(true)}} >See Demo</button>
                     <div className="realLife">

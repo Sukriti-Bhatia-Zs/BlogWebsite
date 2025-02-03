@@ -24,9 +24,9 @@ const Hook=()=>{
                     <p style={{fontWeight:"bold"}}>The UseEffect hook takes two arguments - a function and an optional array of dependencies.</p>
                 </div>
                 <div className="image-container">
-                    <img src='./useEffect1.png' alt="effect1" />
-                    <img src='./useEffect2.png' alt="effect2" />
-                    <img src='./useEffect3.png' alt="effect3" />
+                    <img src='./useEffect1.png' alt="effect1" className="imgs"/>
+                    <img src='./useEffect2-2.png' alt="effect2" className="imgs"/>
+                    <img src='./useEffect3-3.png' alt="effect3" className="imgs"/>
                 </div>
                 <div>
                     <p>The function you provide will run depending upon the Dependency Array.</p>

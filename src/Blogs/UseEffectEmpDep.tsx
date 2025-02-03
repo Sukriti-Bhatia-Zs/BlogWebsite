@@ -28,7 +28,7 @@ const UseEffectEmpDep=({setShowModalComponent}:modalprops)=>{
                         <p>Here is an example where the statement will be printed on console when the component is mounted. </p>
                     </div>
                     <div>
-                        <img src='./empdep.png' alt="nodep" style={{width: "50%", height: "auto", objectFit: "contain",borderRadius:"10px"}}/>
+                        <img src='./empdep.png' alt="nodep" className="diving"/>
                     </div>
                     <div>
                         <p><strong>It does not run on re-renders or state updates.</strong></p>
