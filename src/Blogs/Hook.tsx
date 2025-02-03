@@ -1,7 +1,4 @@
 import React , {useState} from 'react'
-import useEffect1 from '../images/useEffect1.png'
-import useEffect2 from '../images/useEffect2.png'
-import useEffect3 from '../images/useEffect3.png'
 import './Blog.css'
 import FullContent from './FullContent.tsx'
 import VideoContent from './VideoContent.tsx'
@@ -14,7 +11,7 @@ const Hook=()=>{
 
     return (
         <div className="hookclass">
-            <div className="Content">
+            <div className="Content" >
                 <div style={{fontWeight:"bold"}}>
                     What exactly is the UseEffect hook?
                 </div>
@@ -27,9 +24,9 @@ const Hook=()=>{
                     <p style={{fontWeight:"bold"}}>The UseEffect hook takes two arguments - a function and an optional array of dependencies.</p>
                 </div>
                 <div className="image-container">
-                    <img src={useEffect1} alt="effect1" />
-                    <img src={useEffect2} alt="effect2" />
-                    <img src={useEffect3} alt="effect3" />
+                    <img src='./useEffect1.png' alt="effect1" />
+                    <img src='./useEffect2.png' alt="effect2" />
+                    <img src='./useEffect3.png' alt="effect3" />
                 </div>
                 <div>
                     <p>The function you provide will run depending upon the Dependency Array.</p>

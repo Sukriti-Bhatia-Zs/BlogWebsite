@@ -1,5 +1,4 @@
 import React ,{useState} from 'react'
-import empdep from '../images/empdep.png'
 
 
 interface modalprops{
@@ -29,7 +28,7 @@ const UseEffectEmpDep=({setShowModalComponent}:modalprops)=>{
                         <p>Here is an example where the statement will be printed on console when the component is mounted. </p>
                     </div>
                     <div>
-                        <img src={empdep} alt="nodep" style={{width: "50%", height: "auto", objectFit: "contain",borderRadius:"10px"}}/>
+                        <img src='./empdep.png' alt="nodep" style={{width: "50%", height: "auto", objectFit: "contain",borderRadius:"10px"}}/>
                     </div>
                     <div>
                         <p><strong>It does not run on re-renders or state updates.</strong></p>

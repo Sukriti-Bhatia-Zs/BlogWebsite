@@ -1,5 +1,4 @@
 import React ,{useState} from 'react'
-import Cleanup from '../images/Cleanup.png'
 import {Link} from 'react-router-dom'
 import UseEffectNoDep from './UseEffectNoDep.tsx'
 import UseEffectEmpDep from './UseEffectEmpDep.tsx'
@@ -52,7 +51,7 @@ const FullContent=({setShowModal,showmodal}:Showprops)=>{
                         we want eventListener to be removed</strong> hence we write the logic in cleanup function</p>
                     </div>
                     <div>
-                        <img src={Cleanup} alt="" style={{width: "50%", height: "auto", objectFit: "contain"}} />
+                        <img src="./Cleanup.png" alt="" style={{width: "50%", height: "auto", objectFit: "contain"}} />
                     </div>
                     <button className="demobtn" onClick={()=>{setShowEffect(true)}} >See Demo</button>
                     <div className="realLife">

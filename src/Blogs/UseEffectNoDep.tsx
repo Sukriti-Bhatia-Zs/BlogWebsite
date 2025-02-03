@@ -1,5 +1,4 @@
 import React ,{useState} from 'react'
-import nodep from '../images/nodep.png'
 
 interface modalprops{
     setShowModalComponent:React.Dispatch<React.setStateAction<boolean>>
@@ -28,7 +27,7 @@ const UseEffectNoDep=({setShowModalComponent}:modalprops)=>{
                         <p>Here is an example where the statement will be printed on console everytime when the component has been rendered</p>
                     </div>
                     <div>
-                        <img src={nodep} alt="nodep" style={{width: "50%", height: "auto", objectFit: "contain",borderRadius:"10px"}}/>
+                        <img src='./nodep.png' alt="nodep" style={{width: "50%", height: "auto", objectFit: "contain",borderRadius:"10px"}}/>
                     </div>
                     <div>
                         <p><strong>useEffect() executes after every render both on mount and updates.</strong></p>
