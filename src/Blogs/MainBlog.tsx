@@ -38,7 +38,7 @@ const MainBlog=()=>{
                         </div>
                 </div>
                 <div className="vids">
-                    <video className="vid" src='/video1.mp4' autoPlay muted loop >
+                    <video className="vid" src='/video1.mp4' autoPlay muted loop  style={{ pointerEvents: "none" }} >
                         Your browser does not support the video tag.
                     </video>
                 </div>
