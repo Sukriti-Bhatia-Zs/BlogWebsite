@@ -25,8 +25,8 @@ const Hook=()=>{
                 </div>
                 <div className="image-container">
                     <img src='./useEffect1.png' alt="effect1" className="imgs"/>
-                    <img src='./useEffect2-2.png' alt="effect2" className="imgs"/>
-                    <img src='./useEffect3-3.png' alt="effect3" className="imgs"/>
+                    <img src='./useEffectII.png' alt="effect2" className="imgs"/>
+                    <img src='./useEffectIII.png' alt="effect3" className="imgs"/>
                 </div>
                 <div>
                     <p>The function you provide will run depending upon the Dependency Array.</p>
