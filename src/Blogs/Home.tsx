@@ -29,7 +29,7 @@ const Home=()=>{
 
         <div className="homediv">
             <div className="animated" ref={animateref}>
-                <div className="styling" style={{ animation:  'scaleInOut 2s ease-in-out infinite'}} >
+                <div className="styling" style={{ animation:  'scaleInOut 2s ease-in-out infinite',cursor:"pointer"}} >
                     <h1 style={{width:"100%"}}>Welcome To The World Of Blogging </h1>
                 </div>
             </div>
