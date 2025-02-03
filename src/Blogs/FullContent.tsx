@@ -54,9 +54,7 @@ const FullContent=({setShowModal,showmodal}:Showprops)=>{
                     <div>
                         <img src={Cleanup} alt="" style={{width: "50%", height: "auto", objectFit: "contain"}} />
                     </div>
-                    <div>
-                        <button className="btn" onClick={()=>{setShowEffect(true)}} style={{color:"black"}}>See Demo</button>
-                    </div>
+                    <button className="btn" onClick={()=>{setShowEffect(true)}} style={{color:"black"}}>See Demo</button>
                     <div className="realLife">
                         <div>Click to see different type of useEffect Methods</div>
                         <div className="dependencies">
